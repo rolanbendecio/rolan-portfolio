@@ -1,0 +1,64 @@
+header.masthead {
+  background-image: url(../img/bg-hero.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  background-position: center center;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    left: 0;
+    background: rgb(30,30,34);
+    background: linear-gradient(90deg, rgba(30,30,34,1) 0%, rgba(26,26,33,0.7903536414565826) 38%, rgba(17,18,18,1) 100%);
+  }
+
+  .contents {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  h1 {
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3rem;
+    line-height: 3rem;
+
+    &::after {
+        content: "";
+        margin: auto;
+        display: block;
+        width: 200px;
+        padding-top: 14px;
+        border-color: #e68c83;
+        border-bottom: 5px solid #f76c6f;
+    }
+  }
+
+  h2 {
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    @include body-font;
+  }
+}
+@media (min-width: 992px) {
+  header.masthead {
+
+    h1 {
+      font-size: 4.75em;
+      line-height: 4rem;
+    }
+    h2 {
+      font-size: 1.75em;
+    }
+
+  }
+}
